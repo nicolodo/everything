@@ -35,3 +35,5 @@ def ex9():
     # cube comprehension
     cubes = [num**3 for num in range(1,11,1)]
     print(cubes)
+
+# do you like comments?
