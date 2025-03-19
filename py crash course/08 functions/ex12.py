@@ -11,4 +11,3 @@ def ex12():
     makeSandwich('egg','cress')
     makeSandwich('ham','cheese')
 
-ex12()

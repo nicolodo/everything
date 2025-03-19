@@ -4,7 +4,7 @@ unprinted = ['dog','car','bus','rain','slime','hat']
 printed = []
 
 # simulate printing
-def printModels(unprinted,printed)
+def printModels(unprinted,printed):
     while unprinted:
         current = unprinted.pop()
         print(f"currently printing {current}")
