@@ -34,11 +34,9 @@ class User:
             for permission in self.permissions:
                 print(f"\t{permission}")
 
-class Admin(User):
-    """Simulation of a computer adminstrator"""
-    def __init__(self, name, password):
-        # import user attributes and functions
-        super().__init__(name,password,"Tux Penguin","All")
+class Priveleges:
+    """Admin priveleges"""
+    def __init__(self):
         # Admin privileges
         self.priveleges = [
             'add/remove users',
@@ -53,5 +51,12 @@ class Admin(User):
         for privelege in self.priveleges:
             print(f"\t-{privelege}")
 
+class Admin(User):
+    """Simulation of a computer adminstrator"""
+    def __init__(self, name, password):
+        # import user attributes and functions
+        super().__init__(name,password,"Tux Penguin","All")
+        self.priveleges = Priveleges()
+
 jim = Admin('Jim','12345')
-jim.showPrivileges()
+jim.priveleges.showPrivileges()
