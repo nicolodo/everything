@@ -1,5 +1,5 @@
 
-# ex 3 Users
+# ex 3,5,7 Users
 
 class User:
     """Simulates a User on a computer"""
@@ -27,18 +27,31 @@ class User:
 
     def describeUser(self):
         print(f"{self.name}'s password is {self.password}")
-        print(f"their desktop wallpaper is a {self.wallpaper}")
+        print(f"their desktop wallpaper is a {self.wallpaper}")        
         print(f"and they have permission to:")
 
         if self.permissions:
             for permission in self.permissions:
                 print(f"\t{permission}")
 
+class Admin(User):
+    """Simulation of a computer adminstrator"""
+    def __init__(self, name, password):
+        # import user attributes and functions
+        super().__init__(name,password,"Tux Penguin","All")
+        # Admin privileges
+        self.priveleges = [
+            'add/remove users',
+            'add/rm permissions',
+            'change user passwords',
+            'change user wallpapers',
+            'install packages'
+        ]
+        
+    def showPrivileges(self):
+        print("Admin user has the following privileges")
+        for privelege in self.priveleges:
+            print(f"\t-{privelege}")
 
-brian = User('brian','password','cat','delete sys32')
-brian.greetUser()
-brian.describeUser()
-brian.loginAttempts += 10
-print(f"{brian.name} has tried to login {brian.loginAttempts} times")
-brian.resetLoginAttempts()
-print(f"{brian.name} has tried to login {brian.loginAttempts} times")
+jim = Admin('Jim','12345')
+jim.showPrivileges()
