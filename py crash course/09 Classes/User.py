@@ -1,6 +1,4 @@
 
-# ex 3,5,7 Users
-
 class User:
     """Simulates a User on a computer"""
     def __init__(self,name,password,wallpaper,*permissions):
@@ -33,30 +31,3 @@ class User:
         if self.permissions:
             for permission in self.permissions:
                 print(f"\t{permission}")
-
-class privileges:
-    """Admin privileges"""
-    def __init__(self):
-        # Admin privileges
-        self.privileges = [
-            'add/remove users',
-            'add/rm permissions',
-            'change user passwords',
-            'change user wallpapers',
-            'install packages'
-        ]
-        
-    def showPrivileges(self):
-        print("Admin user has the following privileges")
-        for privelege in self.privileges:
-            print(f"\t-{privelege}")
-
-class Admin(User):
-    """Simulation of a computer adminstrator"""
-    def __init__(self, name, password):
-        # import user attributes and functions
-        super().__init__(name,password,"Tux Penguin","All")
-        self.privileges = privileges()
-
-jim = Admin('Jim','12345')
-jim.privileges.showPrivileges()

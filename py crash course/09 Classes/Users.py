@@ -1,4 +1,3 @@
-
 # ex 3,5,7 Users
 
 class User:
@@ -58,5 +57,5 @@ class Admin(User):
         super().__init__(name,password,"Tux Penguin","All")
         self.privileges = privileges()
 
-jim = Admin('Jim','12345')
-jim.privileges.showPrivileges()
+John = Admin('John','password')
+John.privileges.showPrivileges()
