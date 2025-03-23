@@ -1,0 +1,8 @@
+atm with python I think I know how to
+do loops through lists and dictionaries
+and open files to read and write to them
+We covered using flags to break out of loops
+you can see if a string contains another string in it
+Covered classes, their methods attributes inheritance
+and breaking up classes to make them more manageable
+This is known as "composition"
