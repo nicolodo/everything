@@ -47,7 +47,7 @@
   @sym q    @win @enm    r    t    y    u    i    o    p    [    ]    \
   @cec a    @ssf @ctl @nwa g    h    j    @ctl @ssf ;    '    ret
   lsft z    x    c    v    b    n    m    ,     .    /   rsft
-  lctl lmet lalt          @slt            ralt rmet rctl 				;; "f14" (does nothing I hope) & replaces lctl (left control) 
+  f14 lmet lalt          @slt            ralt rmet rctl 				;; "f14" (does nothing I hope) & replaces lctl (left control) 
 )
 
 (deflayer numbers
