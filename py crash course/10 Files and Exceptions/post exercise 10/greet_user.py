@@ -19,6 +19,9 @@ def greet_user():
         print("Hello " + username)
     else:
         # ask for name
-        get_username()
+        get_name()
+
+
+
 
 greet_user()
