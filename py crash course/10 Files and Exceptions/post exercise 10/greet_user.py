@@ -3,13 +3,18 @@ import json
 
 filename = 'username.json' #get the file we are reading from
 
-def greet_user():
+def get_stored_username():
     try:
         with open(filename) as f_obj:
             name = json.load(f_obj)
     except FileNotFoundError:
-        print("please make the file first!")
+        return None
     else:
-        print(f"Hello {name.capitalize()}!")
+        return name
+
+def greet_user():
+    """Greet the user by name""""
+    username = get_stored_username()
+
 
 greet_user()
