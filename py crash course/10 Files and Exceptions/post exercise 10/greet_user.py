@@ -13,8 +13,12 @@ def get_stored_username():
         return name
 
 def greet_user():
-    """Greet the user by name""""
+    """Greet the user by name"""
     username = get_stored_username()
-
+    if username:
+        print("Hello " + username)
+    else:
+        # ask for name
+        get_username()
 
 greet_user()
