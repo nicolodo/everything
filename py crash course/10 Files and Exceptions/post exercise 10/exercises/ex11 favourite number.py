@@ -34,3 +34,6 @@ def greet_user():
         get_user_favNum()
 
 greet_user()
+
+# check if a different user from before
+# ask for their name and if its different from the stored value
