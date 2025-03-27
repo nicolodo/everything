@@ -29,7 +29,7 @@ def retrieve_name():
     try:
         with open(filename) as f_obj:
             name = json.load(f_obj)
-            print(name)
+            print(f"We have found a name: {name}")
     except FileNotFoundError:
         print("File not found oh no oh dear")                            
         return None
@@ -46,9 +46,9 @@ def greet_user():
         print(f"Hi {name} nice to see you again")
 
 def isItSameUser():
-    answer = None
-    prompt = "Is this you yes or no: "
-    while answer.lower() not in ['yes','no','y','n']:
+    answer = ''
+    prompt = "Is this you (y)es or (n)o: "
+    while answer.lower() not in ['y','n']: 
         answer = input(prompt)
     if 'y' in answer:
         return True
@@ -61,12 +61,16 @@ def verify_user():
     # Ask if this is the correct username
     # if not thencall get_new_username()
     name = retrieve_name()
-    if not name:
-        name == get_name()
-    else:
+    if name:
         sameUser = isItSameUser()
+        if not sameUser:
+            name = get_name()
+    else:
+        name = get_name()
+        
+    print(f"Hi {name} lovely to see you today!")
 
-    
+verify_user()    
 
 
 
