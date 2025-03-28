@@ -1,7 +1,7 @@
 
 
 
-def city_country(city, country):
-    name = city + ', ' + country
+def city_country(city, country, population):
+    name = city + ', ' + country + ' - ' + population
     return name.title()
 
