@@ -17,6 +17,20 @@ class CityCountryTestCase(unittest.TestCase):
         print(combinedName,compareName)
 
         self.assertEqual(combinedName,compareName)
+    
+    def test_city_country_population(self):
+        compareName = "London, England - 10000000"
+        city = "London"
+        country = "England"
+        population = "10000000"
+        combinedName = city_country(city,country,population)
+        print(combinedName)
+
+        print(combinedName +' : '+ compareName)
+
+        self.assertEqual(combinedName,compareName)
+
+
 
 unittest.main()
 
