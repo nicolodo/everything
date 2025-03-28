@@ -7,11 +7,12 @@ from city_functions import city_country
 class CityCountryTestCase(unittest.TestCase):
     """Tests for the city_country() function"""
 
-    def Test_city_country(self):
+    def test_city_country(self):
         compareName = "London, England"
         city = "London"
         country = "England"
-        combinedName = city_country(city,country)
+        combinedName = city_country(city,country,5000)
+        print(combinedName)
 
         print(combinedName,compareName)
 
