@@ -1,19 +1,23 @@
 
-# ex1 importing city functions 
-# and seeing if it works
-
 import unittest
 from city_functions import city_country
 
-class cityTestCase(unittest.TestCase):
-    """Tests for 'city_functions.py'."""
+# we are testing the city_country function
 
-    def test_city_country(self):
-        """Do cities like Vatican City, Vatican City work?"""
-        city = city_country('vatican city','vatican city')
-        print(f"The city is {city}")
-        self.assertEqual('vatican city, vatican city','vatican city, vatican city')
+class CityCountryTestCase(unittest.TestCase):
+    """Tests for the city_country() function"""
+
+    def Test_city_country(self):
+        compareName = "London, England"
+        city = "London"
+        country = "England"
+        combinedName = city_country(city,country)
+
+        print(combinedName,compareName)
+
+        self.assertEqual(combinedName,compareName)
+
+unittest.main()
 
 
-
-
+    
