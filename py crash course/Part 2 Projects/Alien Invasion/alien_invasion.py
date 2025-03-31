@@ -24,11 +24,8 @@ def run_game():
     # Start the main loop for the game.
     while True:
         gf.check_events()
+        gf.update_screen(ai_settings, screen, ship)
 
-        # Redraw the screen during each pass through the loop.                  
-
-        # Make the most recently drawn screen visible
-        pygame.display.flip()
 
 run_game()
 

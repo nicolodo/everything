@@ -11,9 +11,12 @@ def check_events():
 
 def update_screen(ai_settings, screen, ship):
     # update images on the screen and flip to new screen
-        screen.fill(ai_settings.bg_color)
-        ship.blitme()
+    screen.fill(ai_settings.bg_color)
+    ship.blitme()
         
+    # make the most recently drawn frame visible
+    pygame.display.flip()
+
 
 
 
