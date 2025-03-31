@@ -2,6 +2,8 @@
 import sys
 
 import pygame
+
+from ship import Ship
 from settings import Settings
 
 def run_game():
@@ -16,6 +18,8 @@ def run_game():
     # Set the backgrouned color.
     bg_color = (230,230,230)
 
+    ship = Ship(screen) 
+
     # Start the main loop for the game.
     while True:
 
@@ -26,6 +30,7 @@ def run_game():
         
         # Redraw the screen during each pass through the loop.                  
         screen.fill(ai_settings.bg_color)
+        ship.blitme()
 
         # Make the most recently drawn screen visible
         pygame.display.flip()
