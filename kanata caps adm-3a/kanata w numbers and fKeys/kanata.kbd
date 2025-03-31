@@ -84,6 +84,6 @@
   _    S-1  S-2  S-3  S-4  S-5  S-6  S-7  S-8  S-9  S-0  _    _    _
   _    S-5  S-6  S-7  S-8  _    _    _    _    S-9  S-0  _    _    _
   _    _    _    del  _    _    left down up   rght bspc _    _       ;; this is the home row
-  _    _    _    _    _    _    _    ret  _    _    _    _
+  _    _    _    _    _    _    _    ret  _    _    _    prtsc    ;; swap rsft with prnt on f hold
   _    _    _              _              _    _    _
 )
