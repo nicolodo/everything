@@ -19,7 +19,7 @@ def run_game():
     # Set the backgrouned color.
     bg_color = (230,230,230)
 
-    ship = Ship(screen) 
+    ship = Ship(ai_settings, screen) 
 
     # Start the main loop for the game.
     while True:
