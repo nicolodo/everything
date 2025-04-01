@@ -16,9 +16,6 @@ def run_game():
         ai_settings.screen_height))
     pygame.display.set_caption("Alien Invasion")
 
-    # Set the backgrouned color.
-    bg_color = (230,230,230)
-
     ship = Ship(ai_settings, screen) 
 
     # Start the main loop for the game.
