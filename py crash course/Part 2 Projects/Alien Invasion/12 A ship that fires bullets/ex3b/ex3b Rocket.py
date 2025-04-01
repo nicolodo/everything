@@ -1,20 +1,23 @@
 
 import pygame, sys
-from settings import Settings
+from RKTsettings import RKTSettings
 
 
 def run():
     pygame.init()
     ACTIVE = True
-    ai_settings = Settings()
+    RKT_settings = RKTSettings()
 
-    SCREEN = pygame.display.set_mode(ai_settings.SCREEN_SIZE)
-    pygame.display.set_caption(ai_settings.TITLE)
+    SCREEN = pygame.display.set_mode(RKT_settings.SCREEN_SIZE)
+    pygame.display.set_caption(RKT_settings.TITLE)
 
     while ACTIVE:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 sys.exit()
+        
+    # Draw background to the screen
+    SCREEN.fill(RKT_settings.BG_COLOR)
         
     pygame.display.flip()
 

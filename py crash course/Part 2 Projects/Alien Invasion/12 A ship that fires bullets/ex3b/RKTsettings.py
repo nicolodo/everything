@@ -1,7 +1,7 @@
 
 import pygame
 
-class Settings:
+class RKTSettings:
     """Put all the major settings here"""
 
     def __init__(self):
