@@ -1,13 +1,15 @@
 
 import pygame, sys
-
+from settings import Settings
 
 
 def run():
     pygame.init()
-    SCREEN = pygame.display.set_mode((400,300))
-    pygame.display.set_caption("Rocket Game")
     ACTIVE = True
+    ai_settings = Settings()
+
+    SCREEN = pygame.display.set_mode(ai_settings.SCREEN_SIZE)
+    pygame.display.set_caption(ai_settings.TITLE)
 
     while ACTIVE:
         for event in pygame.event.get():
