@@ -1,5 +1,6 @@
 
 import sys, pygame
+import character
 
 # setup screen, SIZE
 # blue color variable
@@ -16,6 +17,8 @@ def Run():
     pygame.display.set_caption(NAME)
     ACTIVE = True
 
+    Jim = character.Character(SCREEN)
+
     # Start the main loop
     while ACTIVE:
 
@@ -23,9 +26,15 @@ def Run():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 sys.exit()
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_j:
+                    sys.exit()
 
         # Fill screen with Blue background
         SCREEN.fill(BLUE)
+
+        # Draw character onto the screen
+        Jim.blitme()
 
         # Draw to screen
         pygame.display.flip()
