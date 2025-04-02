@@ -17,7 +17,10 @@ plt.tick_params('both', which='major', labelsize=14)
 # Set range of tick axis
 plt.axis([0,1100, 0, 1100000])
 
-plt.show()
+
+
+# instead of show you can save the figure with this command
+plt.savefig('squares.png', bbox_inches='tight')
 
 
 
