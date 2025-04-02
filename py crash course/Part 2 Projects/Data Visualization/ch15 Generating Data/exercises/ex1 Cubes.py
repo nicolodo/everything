@@ -1,15 +1,18 @@
 
 import matplotlib.pyplot as plt
 
+# part 2 do 5000 cube numbers
+
 # setup values
-x_values = [1,2,3,4,5]
-y_values = [1,8,27,64,125]
+x_values = list(range(1,5001))
+y_values = [x**2 for x in x_values]
 
 # setup and style output 
 plt.scatter(x_values,y_values)
 
 # plot onto a window
 plt.show()
+
 
 
 
