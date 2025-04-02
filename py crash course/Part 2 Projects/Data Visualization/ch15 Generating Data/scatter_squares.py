@@ -6,7 +6,7 @@ x_values = list(range(1,1001))
 y_values = [x**2 for x in x_values]
 
 # style output
-plt.scatter(x_values, y_values,edgecolors='none', s=200) # s is dot size 
+plt.scatter(x_values, y_values,edgecolors='none', s=40) # s is dot size 
     # edgecolor is the color around each point
 plt.title('Square numbers', fontsize=24)
 plt.xlabel('Value', fontsize=14)
