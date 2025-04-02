@@ -2,8 +2,8 @@
 import matplotlib.pyplot as plt
 
 # values
-x_values = [1, 2, 3, 4, 5]
-y_values = [1, 4, 9, 16, 25]
+x_values = list(range(1,1001))
+y_values = [x**2 for x in x_values]
 
 # style output
 plt.scatter(x_values, y_values, s=200) # s is the size of the dots
