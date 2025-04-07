@@ -16,9 +16,13 @@ def run():
 
     # setup the event loop
     while ACTIVE:
+        # watch for events
         for event in pygame.event.get():
             if event.type == pygame.QUIT: # close if x clicked
                 sys.exit()
+
+        # Redraw screen
+        SCREEN.fill(COLOR)
 
         # mk the most recently drawn screen visible
         pygame.display.flip()
