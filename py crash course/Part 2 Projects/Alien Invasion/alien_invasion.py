@@ -10,14 +10,18 @@ def run():
     COLOR = (200,200,200)
     # choose a name for the window
     NAME = "Alien Invasion"
+    pygame.display.set_caption(NAME)
     ACTIVE = True
 
 
     # setup the event loop
     while ACTIVE:
         for event in pygame.event.get():
-            if event == pygame.QUIT: # close if x clicked
+            if event.type == pygame.QUIT: # close if x clicked
                 sys.exit()
+
+        # mk the most recently drawn screen visible
+        
 
 run()
 
