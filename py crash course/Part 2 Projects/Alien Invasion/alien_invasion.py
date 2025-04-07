@@ -21,7 +21,8 @@ def run():
                 sys.exit()
 
         # mk the most recently drawn screen visible
-        
+        pygame.display.flip()
+
 
 run()
 
