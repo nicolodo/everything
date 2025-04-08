@@ -2,17 +2,18 @@
 # import libraries
 import pygame, sys
 
+from settings import Settings
+
 def run():
 
     pygame.init()
-    SIZE = (400, 300)
-    SCREEN = pygame.display.set_mode(SIZE)
+    ai_settings = Settings()
+    SCREEN = pygame.display.set_mode(ai_settings.SCREEN_SIZE)
     COLOR = (200,200,200)
     # choose a name for the window
     NAME = "Alien Invasion"
     pygame.display.set_caption(NAME)
     ACTIVE = True
-
 
     # setup the event loop
     while ACTIVE:
@@ -22,11 +23,10 @@ def run():
                 sys.exit()
 
         # Redraw screen
-        SCREEN.fill(COLOR)
+        SCREEN.fill(ai_settings.BG_COLOR)
 
         # mk the most recently drawn screen visible
         pygame.display.flip()
-
 
 run()
 
