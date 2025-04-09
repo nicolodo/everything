@@ -4,6 +4,7 @@ import pygame, sys
 
 from settings import Settings
 from ship import Ship
+import game_functions as gf
 
 def run():
 
@@ -23,9 +24,7 @@ def run():
     # setup the event loop
     while ACTIVE:
         # watch for events
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT: # close if x clicked
-                sys.exit()
+        gf.check_events()
 
         # Redraw screen
         SCREEN.fill(ai_settings.COLOR.WHITE)
