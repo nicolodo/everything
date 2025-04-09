@@ -2,7 +2,7 @@
 class Character():
     """Make a pygame img class which contains sonic"""
 
-    def __init__(self, picture, screen):
+    def __init__(self, screen):
         """Takes in the img shown and the screen used"""
         path = 'images/sanic2.png'
         self.image = pygame.image.load(path)
