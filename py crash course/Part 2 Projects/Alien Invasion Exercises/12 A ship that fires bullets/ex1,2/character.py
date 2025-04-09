@@ -1,4 +1,7 @@
 
+import pygame
+
+
 class Character():
     """Make a pygame img class which contains sonic"""
 
