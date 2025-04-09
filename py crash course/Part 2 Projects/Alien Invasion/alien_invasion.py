@@ -25,13 +25,7 @@ def run():
     while ACTIVE:
         # watch for events
         gf.check_events()
-
-        # Redraw screen
-        SCREEN.fill(ai_settings.COLOR.WHITE)
-        ship.blitme()
-
-        # mk the most recently drawn screen visible
-        pygame.display.flip()
+        gf.update_screen(ai_settings, SCREEN, ship)
 
 run()
 
