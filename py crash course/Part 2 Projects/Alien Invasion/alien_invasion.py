@@ -28,7 +28,7 @@ def run():
                 sys.exit()
 
         # Redraw screen
-        SCREEN.fill(ai_settings.BG_COLOR)
+        SCREEN.fill(ai_settings.COLOR.WHITE)
         ship.blitme()
 
         # mk the most recently drawn screen visible
