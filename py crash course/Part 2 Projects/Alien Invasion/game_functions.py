@@ -9,4 +9,12 @@ def check_events():
         if event.type == pygame.QUIT:
             sys.exit()
 
+def update_screen(ai_settings, screen, ship):
+    """Update images on the screen and flip to the new screen."""
+    # Redraw screen
+    screen.fill(ai_settings.COLOR.WHITE)
+    ship.blitme()
+
+    # mk the most recently drawn screen visible
+    pygame.display.flip()
 
