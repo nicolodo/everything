@@ -19,12 +19,10 @@ def run():
     # Make a ship
     ship = Ship(SCREEN)
 
-    ACTIVE = True
-
     # setup the event loop
-    while ACTIVE:
+    while True:
         # watch for events
-        gf.check_events()
+        gf.check_events(ship)
         gf.update_screen(ai_settings, SCREEN, ship)
 
 run()
