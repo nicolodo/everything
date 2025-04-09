@@ -1,5 +1,5 @@
 
-class sanic():
+class Character():
     """Make a pygame img class which contains sonic"""
 
     def __init__(self, picture, screen):
