@@ -23,6 +23,7 @@ def run():
     while True:
         # watch for events
         gf.check_events(ship)
+        ship.update() # update the ships position based on flag
         gf.update_screen(ai_settings, SCREEN, ship)
 
 run()
