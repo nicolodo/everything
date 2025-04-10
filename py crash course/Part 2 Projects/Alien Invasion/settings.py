@@ -8,6 +8,9 @@ class Settings:
         self.SCREEN_SIZE = (400,300)
         self.BG_COLOR = (200,200,200)
         self.COLOR = Color()
+
+        # Ship settings
+        self.ship_speed_factor = 1.5
         
 class Color:
     """A class to store colours"""

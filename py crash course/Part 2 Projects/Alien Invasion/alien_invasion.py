@@ -17,7 +17,7 @@ def run():
     pygame.display.set_caption(NAME)
 
     # Make a ship
-    ship = Ship(SCREEN)
+    ship = Ship(ai_settings, SCREEN)
 
     # setup the event loop
     while True:
