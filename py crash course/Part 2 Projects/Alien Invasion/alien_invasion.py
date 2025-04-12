@@ -24,7 +24,7 @@ def run():
     # setup the event loop
     while True:
         # watch for events
-        gf.check_events(ai_settings,SCREEN,ship, bullets)
+        gf.check_events(SCREEN,ship, bullets)
         ship.update() # update the ships position based on flag
         bullets.update()
         gf.update_screen(ai_settings, SCREEN, ship, bullets)
