@@ -13,7 +13,7 @@ class Bullet(Sprite):
 
         # create a bullet obj at (0,0) then set correct position
         self.rect = pygame.Rect(0,0,ai_settings.bullet.width,ai_settings.bullet.height)
-        self.rect.centerx = ship.centerx
+        self.rect.centerx = ship.rect.centerx
         self.rect.top = ship.rect.top
 
         # store the bullets position as a decimal value
