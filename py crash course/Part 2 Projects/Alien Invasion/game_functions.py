@@ -8,6 +8,8 @@ ai_settings = Settings()
 
 def check_keydown_events(event, screen, ship, bullets):
     """Respond to keypresses."""
+    if event.key == pygame.K_q:
+        sys.exit()
     if event.key == pygame.K_RIGHT:
         ship.moving_right = True
     if event.key == pygame.K_LEFT:
