@@ -14,7 +14,7 @@ class Rocket:
         self.screenRect = self.screen.get_rect()
 
         # setup the rockets attributes
-        path = 'images/rocket2.bmp'
+        path = 'images/rocket.bmp'
         self.img = pygame.image.load(
             # 'images/rocket.bmp'
             path
