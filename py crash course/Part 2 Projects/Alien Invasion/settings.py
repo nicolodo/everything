@@ -19,7 +19,7 @@ class Bullet:
     """Holds settings particular to bullets"""
 
     def __init__(self):
-        self.speed_factor = 1
+        self.speedFactor = 1
         self.width = 3
         self.height = 10
         self.color = ( 60, 60, 60)
