@@ -1,8 +1,9 @@
 
 # import libraries
-import pygame, sys
+import pygame 
 
 from settings import Settings
+from pygame.sprite import Group
 from ship import Ship
 import game_functions as gf
 
@@ -16,15 +17,17 @@ def run():
     NAME = "Alien Invasion"
     pygame.display.set_caption(NAME)
 
-    # Make a ship
+    # Make a ship and bullet group
     ship = Ship(ai_settings, SCREEN)
+    bullets = Group()
 
     # setup the event loop
     while True:
         # watch for events
-        gf.check_events(ship)
+        gf.check_events(ai_settings,SCREEN,ship, bullets)
         ship.update() # update the ships position based on flag
-        gf.update_screen(ai_settings, SCREEN, ship)
+        bullets.update()
+        gf.update_screen(ai_settings, SCREEN, ship, bullets)
 
 run()
 
