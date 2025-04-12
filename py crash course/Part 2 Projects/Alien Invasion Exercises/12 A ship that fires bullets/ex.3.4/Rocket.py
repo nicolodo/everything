@@ -49,6 +49,7 @@ def run():
                 
 
         screen.fill(BLUE)
+        rocket.updatePosition()
         rocket.blit_me()
 
         pygame.display.flip()
