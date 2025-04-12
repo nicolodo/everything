@@ -26,6 +26,9 @@ def run():
 
             # handle keyboard events
             if event.type == pygame.KEYDOWN:
+                # easy quit with q
+                if event.key == pygame.K_q:
+                    sys.exit()
                 if event.key == pygame.K_UP:
                     rocket.rect.top -= 1
                 if event.key == pygame.K_DOWN:
@@ -34,7 +37,6 @@ def run():
                     rocket.rect.right += 1
                 if event.key == pygame.K_LEFT:
                     rocket.rect.right -= 1
-
 
         screen.fill(BLUE)
         rocket.blit_me()
