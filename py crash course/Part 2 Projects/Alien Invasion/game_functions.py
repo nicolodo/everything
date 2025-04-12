@@ -35,10 +35,13 @@ def check_events(screen, ship, bullets):
             check_keyup_events(event, ship)
 
 
-def update_screen(ai_settings, screen, ship):
+def update_screen(ai_settings, screen, ship, bullets):
     """Update images on the screen and flip to the new screen."""
     # Redraw screen
     screen.fill(ai_settings.COLOR.WHITE)
+    # Redraw all bullets behind ship and aliens
+    for bullet in bullets.sprites():
+        bullet.draw_bullet()
     ship.blitme()
 
     # mk the most recently drawn screen visible
