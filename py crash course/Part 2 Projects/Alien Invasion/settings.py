@@ -12,12 +12,21 @@ class Settings:
         # Ship settings
         self.ship_speed_factor = 1.5
         
-class Color:
-    """A class to store colours"""
+        # Bullet settings
+        self.bullet = Bullet()
+
+class Bullet:
+    """Holds settings particular to bullets"""
 
     def __init__(self):
-        """Initialise colours"""
-        
+        self.speed_factor = 1
+        self.width = 3
+        self.height = 10
+        self.color = ( 60, 60, 60)
+
+class Color:
+    """A class to store colours"""
+    def __init__(self):
         self.RED   = (255,  0,  0)
         self.GREEN = (  0,255,  0)
         self.BLUE  = (  0,  0,255)
