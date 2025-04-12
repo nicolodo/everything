@@ -30,13 +30,23 @@ def run():
                 if event.key == pygame.K_q:
                     sys.exit()
                 if event.key == pygame.K_UP:
-                    rocket.rect.top -= 1
+                    rocket.moveUp = True
                 if event.key == pygame.K_DOWN:
-                    rocket.rect.top += 1
+                    rocket.moveDown = True
                 if event.key == pygame.K_RIGHT:
-                    rocket.rect.right += 1
+                    rocket.moveRight = True
                 if event.key == pygame.K_LEFT:
-                    rocket.rect.right -= 1
+                    rocket.moveLeft = True 
+            if event.type == pygame.KEYUP:
+                if event.key == pygame.K_UP:
+                    rocket.moveUp = False
+                if event.key == pygame.K_DOWN:
+                    rocket.moveDown = False
+                if event.key == pygame.K_RIGHT:
+                    rocket.moveRight = False
+                if event.key == pygame.K_LEFT:
+                    rocket.moveLeft = False 
+                
 
         screen.fill(BLUE)
         rocket.blit_me()
