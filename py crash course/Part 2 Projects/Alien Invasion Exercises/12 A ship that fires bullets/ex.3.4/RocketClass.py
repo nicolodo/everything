@@ -24,6 +24,23 @@ class Rocket:
         self.rect.bottom = self.screenRect.bottom
         self.rect.centerx = self.screenRect.centerx
 
+        # setup movement flags
+        self.moveLeft = False
+        self.moveRight = False
+        self.moveUp = False
+        self.moveDown = False
+
+    def updatePosition(self):
+        if self.moveLeft and self.rect.left > 0:
+            self.rect.right -= 1
+        if self.moveRight and self.rect.right < self.screenRect.right:
+            self.rect.right += 1
+        if self.moveUp and self.rect.top < 0:
+            self.rect.top -= 1
+        if self.moveDown and self.rect.bottom < self.screenRect.bottom:
+            self.rect.right += 1
+        
+
     def blit_me(self):
         self.screen.blit(self.img, self.rect)
 
