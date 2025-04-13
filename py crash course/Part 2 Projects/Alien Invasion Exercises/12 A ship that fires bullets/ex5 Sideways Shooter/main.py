@@ -1,6 +1,7 @@
 
 import pygame, sys
 from SettingsClass import Settings
+from shipClass import Ship
 
 def run():
     # Setup window
@@ -9,6 +10,7 @@ def run():
     screen = pygame.display.set_mode(settings.screen.size)
     pygame.display.set_caption(settings.screen.caption)
     
+    ship = Ship(screen)
 
     while True:
         # event handling loop
@@ -21,6 +23,7 @@ def run():
 
         # draw to screen
         screen.fill(settings.bgColor)
+        ship.blit_me()
 
         pygame.display.flip()
 
