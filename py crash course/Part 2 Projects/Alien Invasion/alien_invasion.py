@@ -25,14 +25,8 @@ def run():
         # watch for events
         gf.check_events(SCREEN,ship, bullets)
         ship.update() # update the ships position based on flag
-        bullets.update()
+        gf.update_bullets(bullets)
         gf.update_screen(ai_settings, SCREEN, ship, bullets)
-
-        # check if bullet is still on screen
-        for bullet in bullets.copy():
-            if bullet.rect.bottom < 0:
-                bullets.remove(bullet)
-        # print('bullets: ' + str(len(bullets)))
 
 run()
 

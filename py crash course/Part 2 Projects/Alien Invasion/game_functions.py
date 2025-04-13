@@ -37,6 +37,15 @@ def check_events(screen, ship, bullets):
         elif event.type == pygame.KEYUP:
             check_keyup_events(event, ship)
 
+def update_bullets(bullets):
+    """move bullets and rm offscreen bullets"""
+    bullets.update()
+    
+    # check if bullet is still on screen
+    for bullet in bullets.copy():
+        if bullet.rect.bottom < 0:
+            bullets.remove(bullet)
+    # print('bullets: ' + str(len(bullets)))
 
 def update_screen(ai_settings, screen, ship, bullets):
     """Update images on the screen and flip to the new screen."""
