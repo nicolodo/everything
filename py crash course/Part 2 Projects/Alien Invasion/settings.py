@@ -23,6 +23,7 @@ class Bullet:
         self.width = 3
         self.height = 10
         self.color = ( 60, 60, 60)
+        self.numAllowed = 3
 
 class Color:
     """A class to store colours"""
