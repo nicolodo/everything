@@ -2,9 +2,9 @@
 import pygame, sys
 from SettingsClass import Settings
 
-pygame.init()
-
 def run():
+    # Setup window
+    pygame.init()
     settings = Settings()
     screen = pygame.display.set_mode(settings.screen.size)
     pygame.display.set_caption(settings.screen.caption)
