@@ -10,7 +10,7 @@ class Ship:
         self.screenRect = screen.get_rect()
 
         # setup the ships img
-        pathToImage = 'images/ship.bmp'
+        pathToImage = 'images/spaceship.bmp'
         self.image = pygame.image.load(pathToImage)
         self.rect = self.image.get_rect()
         # setup ship position on screen
