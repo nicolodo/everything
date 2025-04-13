@@ -32,7 +32,7 @@ def run():
         for bullet in bullets.copy():
             if bullet.rect.bottom < 0:
                 bullets.remove(bullet)
-        print('bullets: ' + str(len(bullets)))
+        # print('bullets: ' + str(len(bullets)))
 
 run()
 
