@@ -12,7 +12,6 @@ def run():
     pygame.init()
     ai_settings = Settings()
     SCREEN = pygame.display.set_mode(ai_settings.SCREEN_SIZE)
-    COLOR = (200,200,200)
     # choose a name for the window
     NAME = "Alien Invasion"
     pygame.display.set_caption(NAME)
@@ -28,6 +27,12 @@ def run():
         ship.update() # update the ships position based on flag
         bullets.update()
         gf.update_screen(ai_settings, SCREEN, ship, bullets)
+
+        # check if bullet is still on screen
+        for bullet in bullets.copy():
+            if bullet.rect.bottom < 0:
+                bullets.remove(bullet)
+        print('bullets: ' + str(len(bullets)))
 
 run()
 
