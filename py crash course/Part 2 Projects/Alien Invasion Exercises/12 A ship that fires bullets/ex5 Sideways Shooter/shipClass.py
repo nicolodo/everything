@@ -38,7 +38,11 @@ class Ship:
         self.moveUp = False
         self.moveDown = False
 
-
+    def update(self):
+        if self.moveUp and self.rect.top > 0:
+            self.rect.top -= 1
+        if self.moveDown and self.rect.bottom < self.screenRect.bottom:
+            self.rect.bottom += 1
 
     def blit_me(self):
         self.screen.blit(self.image, self.rect)
