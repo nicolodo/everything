@@ -29,11 +29,11 @@ class Ship:
         #     'down':   ( 0, 1),
         #     'right':  ( 1, 0),
         #     'left':   (-1, 0)}
-        self.moveFlag = {
-            'up':     False,
-            'down':   False,
-            'right':  False,
-            'left':   False}
+        # self.moveFlag = {
+        #     'up':     False,
+        #     'down':   False,
+        #     'right':  False,
+        #     'left':   False}
 
         self.moveUp = False
         self.moveDown = False
