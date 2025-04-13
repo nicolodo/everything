@@ -3,7 +3,7 @@ class Settings:
     """holds the settings values"""
     def __init__(self):
         self.screen = screen()
-        self.bgColor = (200,   0,   100)
+        self.bgColor = (192,   0,   128)
 
 class screen:
     """settings particular to the screen"""
