@@ -17,5 +17,9 @@ class Ship:
         self.rect.left = 0
         self.rect.centery = self.screenRect.centery
 
+        # setup ship movement flags
+        self.moveUp = False
+        self.moveDown = False
+
     def blit_me(self):
         self.screen.blit(self.image, self.rect)
