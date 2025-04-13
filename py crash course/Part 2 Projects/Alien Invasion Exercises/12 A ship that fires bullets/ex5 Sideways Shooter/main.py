@@ -35,6 +35,8 @@ def run():
                         ship.moveDown = False
                     case _:
                         continue
+            
+        ship.update()
 
             
 
