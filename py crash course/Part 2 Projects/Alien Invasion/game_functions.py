@@ -17,7 +17,7 @@ def check_keydown_events(event, screen, ship, bullets):
     if event.key == pygame.K_SPACE:
         fire_bullet(screen, ship, bullets)
 
-def fire_bullet(ai_settings, screen, ship, bullets):
+def fire_bullet(screen, ship, bullets):
     # create a new bullet
     if len(bullets) < ai_settings.bullet.numAllowed:
         new_bullet = Bullet(ai_settings, screen, ship)
