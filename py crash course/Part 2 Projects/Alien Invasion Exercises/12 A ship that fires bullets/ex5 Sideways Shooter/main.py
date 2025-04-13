@@ -14,6 +14,11 @@ def run():
 
     while True:
         # event handling loop
+        
+        # set movement keys
+        KeyMoveUp = pygame.K_UP
+        KeyMoveDown = pygame.K_DOWN
+
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 sys.exit()
@@ -21,17 +26,17 @@ def run():
                 match event.key:
                     case pygame.K_q:
                         sys.exit()
-                    case pygame.K_w:
+                    case pygame.K_UP:
                         ship.moveUp = True
-                    case pygame.K_s:
+                    case pygame.K_DOWN:
                         ship.moveDown = True
                     case _:
                         continue
             if event.type == pygame.KEYUP:
                 match event.key:
-                    case pygame.K_w:
+                    case pygame.K_UP:
                         ship.moveUp = False
-                    case pygame.K_s:
+                    case pygame.K_DOWN:
                         ship.moveDown = False
                     case _:
                         continue
