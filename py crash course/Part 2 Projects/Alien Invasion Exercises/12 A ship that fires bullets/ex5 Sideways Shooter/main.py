@@ -14,18 +14,13 @@ def run():
     ship = Ship(screen)
 
     while True:
-        # event handling loop
-        
-        # set movement keys
+        # main game handling loop
         gf.get_events(ship) 
         ship.update()
-
-            
-
+        
         # draw to screen
         screen.fill(settings.bgColor)
         ship.blit_me()
-
         pygame.display.flip()
 
 
