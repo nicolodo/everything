@@ -1,5 +1,5 @@
 
-import pygame
+import pygame, sys
 
 def on_keyDown(event,ship):
     if event == pygame.K_q:
