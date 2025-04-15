@@ -17,24 +17,6 @@ class Ship:
         self.rect.left = 0
         self.rect.centery = self.screenRect.centery
 
-        # setup ship movement flags
-        # self.sides = {
-        #     'up':       self.rect.top,
-        #     'down':     self.rect.bottom,
-        #     'right':    self.rect.right,
-        #     'left':     self.rect.left
-        # }
-        # self.moveDirections = {
-        #     'up':     ( 0,-1),
-        #     'down':   ( 0, 1),
-        #     'right':  ( 1, 0),
-        #     'left':   (-1, 0)}
-        # self.moveFlag = {
-        #     'up':     False,
-        #     'down':   False,
-        #     'right':  False,
-        #     'left':   False}
-
         self.moveUp = False
         self.moveDown = False
 
