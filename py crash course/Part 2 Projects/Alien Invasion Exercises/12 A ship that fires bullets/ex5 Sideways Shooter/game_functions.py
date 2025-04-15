@@ -16,8 +16,8 @@ def on_keyUp(event, ship):
         ship.moveDown = False
 
 def get_events(ship):
-    KeyMoveUp = pygame.K_UP
-    KeyMoveDown = pygame.K_DOWN
+    # KeyMoveUp = pygame.K_UP
+    # KeyMoveDown = pygame.K_DOWN
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
