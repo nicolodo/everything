@@ -1,6 +1,9 @@
 
 import pygame, sys
 
+def createBullet(ship):
+    print("gun jammed")
+
 def on_keyDown(event,ship):
     if event.key == pygame.K_q:
         sys.exit()
@@ -8,6 +11,8 @@ def on_keyDown(event,ship):
         ship.moveUp = True
     if event.key == pygame.K_DOWN:
         ship.moveDown = True
+    if event.key == pygame.K_SPACE:
+        createBullet(ship)
 
 def on_keyUp(event, ship):
     if event.key == pygame.K_UP:
