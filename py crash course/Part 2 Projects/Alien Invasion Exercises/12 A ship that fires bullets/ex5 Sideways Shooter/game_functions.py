@@ -1,4 +1,18 @@
 
+def on_keyDown(event,ship):
+    if event == pygame.K_q:
+        sys.exit()
+    if event == pygame.K_UP:
+        ship.moveUp = True
+    if event == pygame.K_DOWN:
+        ship.moveDown = True
+
+def on_keyUp(event, ship):
+    if event == pygame.K_UP:
+        ship.moveUp = False
+    if event == pygame.K_DOWN:
+        ship.moveDown = False
+
 def get_events(ship):
     KeyMoveUp = pygame.K_UP
     KeyMoveDown = pygame.K_DOWN
@@ -7,20 +21,7 @@ def get_events(ship):
         if event.type == pygame.QUIT:
             sys.exit()
         if event.type == pygame.KEYDOWN:
-            match event.key:
-                case pygame.K_q:
-                    sys.exit()
-                case pygame.K_UP:
-                    ship.moveUp = True
-                case pygame.K_DOWN:
-                    ship.moveDown = True
-                case _:
-                    continue
+            on_keyDown(event, ship)
         if event.type == pygame.KEYUP:
-            match event.key:
-                case pygame.K_UP:
-                    ship.moveUp = False
-                case pygame.K_DOWN:
-                    ship.moveDown = False
-                case _:
-                    continue
+            on_keyUp(event, ship)
+
