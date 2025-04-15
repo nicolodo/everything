@@ -2,17 +2,17 @@
 import pygame, sys
 
 def on_keyDown(event,ship):
-    if event == pygame.K_q:
+    if event.key == pygame.K_q:
         sys.exit()
-    if event == pygame.K_UP:
+    if event.key == pygame.K_UP:
         ship.moveUp = True
-    if event == pygame.K_DOWN:
+    if event.key == pygame.K_DOWN:
         ship.moveDown = True
 
 def on_keyUp(event, ship):
-    if event == pygame.K_UP:
+    if event.key == pygame.K_UP:
         ship.moveUp = False
-    if event == pygame.K_DOWN:
+    if event.key == pygame.K_DOWN:
         ship.moveDown = False
 
 def get_events(ship):
