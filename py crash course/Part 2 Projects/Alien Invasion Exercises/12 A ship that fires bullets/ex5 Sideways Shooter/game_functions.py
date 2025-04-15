@@ -1,4 +1,6 @@
 
+import pygame
+
 def on_keyDown(event,ship):
     if event == pygame.K_q:
         sys.exit()
