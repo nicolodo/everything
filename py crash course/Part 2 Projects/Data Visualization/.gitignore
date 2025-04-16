@@ -1,0 +1,4 @@
+
+# ignore all images in project 2 until the merge
+*.jpg
+*.png

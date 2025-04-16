@@ -1,37 +1,33 @@
 
-import sys
+# import libraries
+import pygame 
 
-import pygame
+from settings import Settings
+from pygame.sprite import Group
+from ship import Ship
 import game_functions as gf
 
-from ship import Ship
-from settings import Settings
+def run():
 
-def run_game():
-    # Initialize pygame, settings,and screen object.
     pygame.init()
     ai_settings = Settings()
-    screen = pygame.display.set_mode((
-        ai_settings.screen_width,
-        ai_settings.screen_height))
-    pygame.display.set_caption("Alien Invasion")
+    SCREEN = pygame.display.set_mode(ai_settings.SCREEN_SIZE)
+    # choose a name for the window
+    NAME = "Alien Invasion"
+    pygame.display.set_caption(NAME)
 
-    # Set the backgrouned color.
-    bg_color = (230,230,230)
+    # Make a ship and bullet group
+    ship = Ship(ai_settings, SCREEN)
+    bullets = Group()
 
-    ship = Ship(ai_settings, screen) 
-
-    # Start the main loop for the game.
+    # setup the event loop
     while True:
-        gf.check_events(ship)
-        ship.update()
-        gf.update_screen(ai_settings, screen, ship)
+        # watch for events
+        gf.check_events(SCREEN,ship, bullets)
+        ship.update() # update the ships position based on flag
+        gf.update_bullets(bullets)
+        gf.update_screen(ai_settings, SCREEN, ship, bullets)
 
-
-run_game()
-
-
-
-
+run()
 
 
