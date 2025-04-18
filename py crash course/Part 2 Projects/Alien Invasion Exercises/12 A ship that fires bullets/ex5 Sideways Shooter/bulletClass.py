@@ -17,7 +17,10 @@ class Bullet:
 
         self.rect.centery = ship.rect.centery
         self.rect.left = ship.rect.right
+    
+    def update(self):
+        self.rect.right += 5
 
     def blit_me(self, screen):
-        continue
+        self.screen.blit(self.image, self.rect)
 
