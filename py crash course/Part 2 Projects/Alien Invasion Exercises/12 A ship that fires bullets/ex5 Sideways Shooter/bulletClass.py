@@ -22,5 +22,6 @@ class Bullet:
         self.rect.right += 5
 
     def blit_me(self, screen):
-        self.screen.blit(self.image, self.rect)
+        pygame.draw.rect(self.screen, self.color, self.rect)
+        # self.screen.blit(self.image, self.rect)
 
