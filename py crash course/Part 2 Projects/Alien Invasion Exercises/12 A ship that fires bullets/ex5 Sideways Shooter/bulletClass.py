@@ -1,6 +1,7 @@
 
 import pygame
 from pygame.sprite import Sprite
+from SettingsClass import Settings
 
 class Bullet(Sprite):
     """This models a bullet shot from the rocket"""
@@ -23,11 +24,12 @@ class Bullet(Sprite):
         # position at ship
         self.rect.centery = ship.rect.centery
         self.rect.left = ship.rect.right
-    
-    def update(self):
-        self.rect.right += 5
 
-    def blit_me(self):
+    def update(self):
+        self.rect.x += 5
+
+    def draw_bullet(self):
         pygame.draw.rect(self.screen, self.color, self.rect)
         # self.screen.blit(self.image, self.rect)
+        pygame.display.flip()
 

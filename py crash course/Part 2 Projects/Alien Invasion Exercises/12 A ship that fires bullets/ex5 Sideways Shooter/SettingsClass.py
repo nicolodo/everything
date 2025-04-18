@@ -4,6 +4,7 @@ class Settings:
     def __init__(self):
         self.screen = screen()
         self.bgColor = (192,   0,   128)
+        
 
 class screen:
     """settings particular to the screen"""

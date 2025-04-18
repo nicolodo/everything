@@ -25,11 +25,7 @@ def run():
         # run the update function on every bullet in group
         bullets.update() 
 
-        # draw to screen
-        screen.fill(settings.bgColor)
-        ship.blit_me()
-        # bullets.blit_me()
-        pygame.display.flip()
+        gf.update_screen(screen, ship, bullets, settings)
         print(len(bullets))
 
 run()
