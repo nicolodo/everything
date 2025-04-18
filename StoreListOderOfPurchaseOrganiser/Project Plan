@@ -1,0 +1,23 @@
+
+I want to make a program that takes in a list of sold items
+(doesn't have to be sold items but it would help)
+to buy at a physical store
+And then using that list orders it in the order
+you would purchase those items according to the
+physical layout of the store.
+Feature: It can either let or not let know whether something
+    is sold or not
+
+How it might be done
+ - Web scrape supermarkets online pages for items that they sell
+    also get their prices, (feature track prices over time)
+ - Find out how items are grouped in a store, 
+    e.g: milk and cheese may be in aisle 8 for Dairy produce.
+ - See how the layout of a store is set, and make a way to 
+    use that, for odering groups of items
+ - find any (or optimal) path for picking up these items
+ - return that as a list
+ - let the user see that list
+
+
+ 
