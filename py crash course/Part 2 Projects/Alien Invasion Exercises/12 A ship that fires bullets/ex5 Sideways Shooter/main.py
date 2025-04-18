@@ -23,9 +23,9 @@ def run():
         gf.get_events(ship, bullets, screen)
         ship.update() # update ship pos
         # run the update function on every bullet in group
-        bullets.update() 
+        gf.update_bullets(screen, bullets) 
 
         gf.update_screen(screen, ship, bullets, settings)
-        print(len(bullets))
+        # print(len(bullets))
 
 run()

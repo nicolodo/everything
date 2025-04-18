@@ -35,6 +35,15 @@ def get_events(ship, bullets, screen):
         if event.type == pygame.KEYUP:
             on_keyUp(event, ship)
 
+def update_bullets(screen, bullets):
+    # update bullet position
+    bullets.update()
+    # rm offscreen bullets
+    for bullet in bullets.copy():
+        if bullet.rect.left > screen.get_rect().right:
+            bullets.remove(bullet)
+    print(len(bullets))
+
 def update_screen(screen, ship, bullets, settings):
     # draw to screen
     screen.fill(settings.bgColor)
