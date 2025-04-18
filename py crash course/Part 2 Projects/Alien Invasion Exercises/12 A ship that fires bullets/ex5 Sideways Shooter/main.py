@@ -18,13 +18,18 @@ def run():
 
     while True:
         # main game handling loop
-        gf.get_events(ship, bullets) 
-        ship.update()
-        
+
+        # handle key events
+        gf.get_events(ship, bullets, screen)
+        ship.update() # update ship pos
+        # run the update function on every bullet in group
+        bullets.update() 
+
         # draw to screen
         screen.fill(settings.bgColor)
         ship.blit_me()
+        # bullets.blit_me()
         pygame.display.flip()
-
+        print(len(bullets))
 
 run()
