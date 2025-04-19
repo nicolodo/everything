@@ -9,7 +9,7 @@ class Ship():
         self.ai_settings = ai_settings
 
         # Load the ship img and get its rect. 
-        self.img = pygame.image.load('images/ship.bmp')
+        self.img = pygame.image.load('image/ship.bmp')
         self.rect = self.img.get_rect()
         self.screen_rect = screen.get_rect()
 
