@@ -5,6 +5,7 @@ import pygame
 from settings import Settings
 from pygame.sprite import Group
 from ship import Ship
+from alien import Alien
 import game_functions as gf
 
 def run():
@@ -20,13 +21,16 @@ def run():
     ship = Ship(ai_settings, SCREEN)
     bullets = Group()
 
+    # Make an alien.
+    alien = Alien(ai_settings, screen)
+
     # setup the event loop
     while True:
         # watch for events
         gf.check_events(SCREEN,ship, bullets)
         ship.update() # update the ships position based on flag
         gf.update_bullets(bullets)
-        gf.update_screen(ai_settings, SCREEN, ship, bullets)
+        gf.update_screen(ai_settings, SCREEN, ship, alien, bullets)
 
 run()
 
