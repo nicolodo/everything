@@ -50,7 +50,7 @@ def update_bullets(bullets):
             bullets.remove(bullet)
     # print('bullets: ' + str(len(bullets)))
 
-def update_screen(ai_settings, screen, ship, Alien, bullets):
+def update_screen(ai_settings, screen, ship, alien, bullets):
     """Update images on the screen and flip to the new screen."""
     # Redraw screen
     screen.fill(ai_settings.COLOR.WHITE)
@@ -58,7 +58,10 @@ def update_screen(ai_settings, screen, ship, Alien, bullets):
     for bullet in bullets.sprites():
         bullet.draw_bullet()
     ship.blitme()
+    alien.blitme()
 
     # mk the most recently drawn screen visible
     pygame.display.flip()
+
+
 
