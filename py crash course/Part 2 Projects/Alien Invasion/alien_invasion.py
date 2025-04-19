@@ -12,13 +12,13 @@ def run():
 
     pygame.init()
     ai_settings = Settings()
-    SCREEN = pygame.display.set_mode(ai_settings.SCREEN_SIZE)
+    screen = pygame.display.set_mode(ai_settings.screen_SIZE)
     # choose a name for the window
     NAME = "Alien Invasion"
     pygame.display.set_caption(NAME)
 
     # Make a ship and bullet group
-    ship = Ship(ai_settings, SCREEN)
+    ship = Ship(ai_settings, screen)
     bullets = Group()
 
     # Make an alien.
@@ -27,10 +27,10 @@ def run():
     # setup the event loop
     while True:
         # watch for events
-        gf.check_events(SCREEN,ship, bullets)
+        gf.check_events(screen,ship, bullets)
         ship.update() # update the ships position based on flag
         gf.update_bullets(bullets)
-        gf.update_screen(ai_settings, SCREEN, ship, alien, bullets)
+        gf.update_screen(ai_settings, screen, ship, alien, bullets)
 
 run()
 

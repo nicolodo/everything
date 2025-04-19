@@ -50,7 +50,7 @@ def update_bullets(bullets):
             bullets.remove(bullet)
     # print('bullets: ' + str(len(bullets)))
 
-def update_screen(ai_settings, screen, ship, bullets):
+def update_screen(ai_settings, screen, ship, Alien, bullets):
     """Update images on the screen and flip to the new screen."""
     # Redraw screen
     screen.fill(ai_settings.COLOR.WHITE)
