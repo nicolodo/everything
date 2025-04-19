@@ -6,6 +6,8 @@ class Settings:
         """Initialise the games settings"""
         # screen settings
         self.screen_SIZE = (600,600)
+        self.screen_width = self.screen_SIZE[0]
+        self.screen_height = self.screen_SIZE[1]
         self.BG_COLOR = (200,200,200)
         self.COLOR = Color()
 
