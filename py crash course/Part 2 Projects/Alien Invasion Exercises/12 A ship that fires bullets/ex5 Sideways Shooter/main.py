@@ -22,10 +22,10 @@ def run():
         # handle key events
         gf.get_events(ship, bullets, screen)
         ship.update() # update ship pos
-        # run the update function on every bullet in group
+        # move bullets and rm offscreen bullets
         gf.update_bullets(screen, bullets) 
 
+        # draw all the things to the screen
         gf.update_screen(screen, ship, bullets, settings)
-        # print(len(bullets))
 
 run()

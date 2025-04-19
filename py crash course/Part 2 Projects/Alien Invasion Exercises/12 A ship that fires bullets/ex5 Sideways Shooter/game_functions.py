@@ -6,6 +6,7 @@ def createBullet(ship, bullets, screen):
     # make and add bullet at ship pos to group
     new_bullet = Bullet(ship, screen)
     bullets.add(new_bullet)
+    print(len(bullets))
 
 def on_keyDown(event,ship, bullets, screen):
     if event.key == pygame.K_q:
@@ -42,7 +43,7 @@ def update_bullets(screen, bullets):
     for bullet in bullets.copy():
         if bullet.rect.left > screen.get_rect().right:
             bullets.remove(bullet)
-    print(len(bullets))
+            print(len(bullets))
 
 def update_screen(screen, ship, bullets, settings):
     # draw to screen
