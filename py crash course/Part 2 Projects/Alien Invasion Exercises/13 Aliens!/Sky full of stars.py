@@ -3,12 +3,10 @@ import sys
 import pygame
 import Settings
 import starClass
+import gameFunctions as gf
 
 # make a window in pygame
 def run():
-    def quitGame():
-        print("Thanks for playing!")
-        sys.exit()
     pygame.init()
     settings = Settings.Settings()
     screen = pygame.display.set_mode((settings.screenSize))
@@ -17,18 +15,9 @@ def run():
     star = starClass.star(screen)
 
     while True:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                quitGame()
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_q:
-                    quitGame()
-
-
-        screen.fill(settings.bgColor)
-        star.blit_me()
-
-        pygame.display.flip()
+        gf.eventHandling()
+        gf.updateScreen(star,screen)
+        
 run()
 # make a star.bmp, import it to pygame
 
