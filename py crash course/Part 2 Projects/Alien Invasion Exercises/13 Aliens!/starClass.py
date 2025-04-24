@@ -2,12 +2,12 @@
 import pygame
 from pygame.sprite import Sprite
 
-class star(Sprite):
+class Star(Sprite):
     """This is the star we draw to the screen"""
 
     def __init__(self, screen):
 
-        super(star, self).__init__()
+        super(Star, self).__init__()
         self.screen = screen
         self.screenRect = screen.get_rect()
 
