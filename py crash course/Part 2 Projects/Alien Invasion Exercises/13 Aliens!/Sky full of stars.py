@@ -1,6 +1,7 @@
 
 import sys
 import pygame
+from pygame.sprite import Group
 import Settings
 import starClass
 import gameFunctions as gf
@@ -13,11 +14,17 @@ def run():
     pygame.display.set_caption("Wake up Super Star!")
 
     star = starClass.star(screen)
+    stars = Group()
+    stars.add(star)
+
+    starsPerWidth = int(settings.screenWidth/star.rect.width)
+    print(starsPerWidth)
+    
 
     while True:
         gf.eventHandling()
         gf.updateScreen(star,screen)
-        
+
 run()
 # make a star.bmp, import it to pygame
 
