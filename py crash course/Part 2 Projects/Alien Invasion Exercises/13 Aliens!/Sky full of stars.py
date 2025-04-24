@@ -5,6 +5,9 @@ import Settings
 
 # make a window in pygame
 def run():
+    def quitGame():
+        print("Thanks for playing!")
+        sys.exit()
     pygame.init()
     settings = Settings.Settings()
     screen = pygame.display.set_mode((settings.screenSize))
@@ -13,10 +16,10 @@ def run():
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                sys.exit()
+                quitGame()
             if event.type == pygame.KEYDOWN:
-                if event == pygame.K_q:
-                    sys.exit()
+                if event.key == pygame.K_q:
+                    quitGame()
 
         screen.fill(settings.bgColor)
 
