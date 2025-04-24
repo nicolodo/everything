@@ -2,6 +2,7 @@
 import sys
 import pygame
 import Settings
+import starClass
 
 # make a window in pygame
 def run():
@@ -13,6 +14,8 @@ def run():
     screen = pygame.display.set_mode((settings.screenSize))
     pygame.display.set_caption("Wake up Super Star!")
 
+    star = starClass.star(screen)
+
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -21,7 +24,9 @@ def run():
                 if event.key == pygame.K_q:
                     quitGame()
 
+
         screen.fill(settings.bgColor)
+        star.blit_me()
 
         pygame.display.flip()
 run()
