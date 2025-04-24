@@ -3,7 +3,7 @@ import sys
 import pygame
 from pygame.sprite import Group
 import Settings
-import starClass
+from starClass import Star 
 import gameFunctions as gf
 
 # make a window in pygame
@@ -13,13 +13,15 @@ def run():
     screen = pygame.display.set_mode((settings.screenSize))
     pygame.display.set_caption("Wake up Super Star!")
 
-    star = starClass.star(screen)
+    star = Star(screen)
     stars = Group()
     stars.add(star)
 
     starsPerWidth = int(settings.screenWidth/star.rect.width)
     print(starsPerWidth)
-    
+    for x in range(starsPerWidth):
+        newStar = Star(screen)
+        newStar.rect.x = x*newStar.rect.width
 
     while True:
         gf.eventHandling()
