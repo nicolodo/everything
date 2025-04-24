@@ -28,7 +28,7 @@ def eventHandling():
             if event.key == pygame.K_q:
                 quitGame()
 
-def updateScreen(star, screen, stars):
+def updateScreen(screen, stars):
     screen.fill(settings.bgColor)
     makeStars(screen, stars)
     # star.blit_me()

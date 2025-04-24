@@ -18,7 +18,7 @@ def run():
 
     while True:
         gf.eventHandling()
-        gf.updateScreen(star, screen, stars)
+        gf.updateScreen(screen, stars)
 
 run()
 # make a star.bmp, import it to pygame
