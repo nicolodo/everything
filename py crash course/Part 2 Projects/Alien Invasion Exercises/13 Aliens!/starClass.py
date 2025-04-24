@@ -11,6 +11,6 @@ class star:
         self.image = pygame.image.load('images/star.bmp')
         self.rect = self.image.get_rect()
 
-    def blit_me():
+    def blit_me(self):
         self.screen.blit(self.image, self.screenRect)
 
