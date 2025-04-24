@@ -15,14 +15,7 @@ def run():
 
     star = Star(screen)
     stars = Group()
-    stars.add(star)
-
-    starsPerWidth = int(settings.screenWidth/star.rect.width)
-    print(starsPerWidth)
-    for x in range(starsPerWidth):
-        newStar = Star(screen)
-        newStar.rect.x = x*newStar.rect.width
-
+    
     while True:
         gf.eventHandling()
         gf.updateScreen(star,screen)
