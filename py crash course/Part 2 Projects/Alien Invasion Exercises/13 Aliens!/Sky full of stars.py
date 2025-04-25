@@ -13,8 +13,9 @@ def run():
     screen = pygame.display.set_mode((settings.screenSize))
     pygame.display.set_caption("Wake up Super Star!")
 
-    star = Star(screen)
+    # star = Star(screen)
     stars = Group()
+    # stars = gf.justMakeStars(screen, stars, 5)
     wobbliness = 4
 
     while True:
