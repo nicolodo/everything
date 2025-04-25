@@ -13,6 +13,8 @@ class Star(Sprite):
 
         self.image = pygame.image.load('images/star.bmp')
         self.rect = self.image.get_rect()
+        self.height = self.rect.height
+        self.width = self.rect.width
 
     def blit_me(self):
         self.screen.blit(self.image, self.screenRect)
