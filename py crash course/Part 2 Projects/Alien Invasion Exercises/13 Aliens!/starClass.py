@@ -6,8 +6,10 @@ class Star(Sprite):
     """This is the star we draw to the screen"""
 
     def __init__(self, screen):
+        
+        # inherit sprite class
+        super(Star, self).__init__() 
 
-        super(Star, self).__init__()
         self.screen = screen
         self.screenRect = screen.get_rect()
 
