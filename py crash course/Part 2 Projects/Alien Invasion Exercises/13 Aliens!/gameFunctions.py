@@ -10,16 +10,15 @@ def makeStars(screen, stars):
     star = Star(screen)
     # horizontal line of stars placement
     starsPerWidth = int(settings.screenWidth/star.rect.width)
+    starsPerHeight = int(settings.screenHeight/star.rect.height)
     for x in range(int(starsPerWidth/2)):
         newStar = Star(screen)
-        newStar.rect.x = 2*x*newStar.rect.width + newStar.rect.width/2
-        stars.add(newStar)
-    # vertical line of stars 
-    starsPerHeight = int(settings.screenHeight/star.rect.height)
-    for y in range(int(starsPerHeight/2)):
-        newStar = Star(screen)
-        newStar.rect.y = 2*y*newStar.rect.height
-        stars.add(newStar)
+        for y in range(int(starsPerHeight/2)):
+        # vertical line of stars 
+            newStar = Star(screen)
+            newStar.rect.y = 2*y*star.height + star.height/2
+            newStar.rect.x = 2*x*star.width + star.width/2
+            stars.add(newStar)
     stars.draw(screen)
 
 def quitGame():
