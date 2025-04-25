@@ -15,10 +15,11 @@ def run():
 
     star = Star(screen)
     stars = Group()
+    wobbliness = 4
 
     while True:
         gf.eventHandling()
-        gf.updateScreen(screen, stars)
+        gf.updateScreen(screen, stars, wobbliness)
 
 run()
 # make a star.bmp, import it to pygame

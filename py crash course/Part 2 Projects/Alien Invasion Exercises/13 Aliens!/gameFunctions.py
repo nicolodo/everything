@@ -6,6 +6,8 @@ settings = Settings.Settings()
 from pygame.sprite import Sprite
 from starClass import Star
 
+from random import randint
+
 def quitGame():
     print("Thanks for playing!")
     sys.exit()
@@ -18,7 +20,7 @@ def eventHandling():
             if event.key == pygame.K_q:
                 quitGame()
 
-def makeStars(screen, stars):
+def makeStars(screen, stars, wobbliness):
     star = Star(screen)
     # horizontal line of stars placement
     starsPerWidth = int(settings.screenWidth/star.rect.width)
@@ -28,14 +30,14 @@ def makeStars(screen, stars):
         for y in range(int(starsPerHeight/2)):
         # vertical line of stars 
             newStar = Star(screen)
-            newStar.rect.y = 2*y*star.height + star.height/2
-            newStar.rect.x = 2*x*star.width + star.width/2
+            newStar.rect.y = 2*y*star.height + star.height/2 + randint(0, wobbliness)
+            newStar.rect.x = 2*x*star.width + star.width/2 + randint(0, wobbliness)
             stars.add(newStar)
     stars.draw(screen)
 
-def updateScreen(screen, stars):
+def updateScreen(screen, stars, wobbliness):
     screen.fill(settings.bgColor)
-    makeStars(screen, stars)
+    makeStars(screen, stars, wobbliness)
     # star.blit_me()
 
     pygame.display.flip()
