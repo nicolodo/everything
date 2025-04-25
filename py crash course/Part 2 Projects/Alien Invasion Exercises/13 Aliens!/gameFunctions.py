@@ -6,6 +6,18 @@ settings = Settings.Settings()
 from pygame.sprite import Sprite
 from starClass import Star
 
+def quitGame():
+    print("Thanks for playing!")
+    sys.exit()
+
+def eventHandling():
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            quitGame()
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_q:
+                quitGame()
+
 def makeStars(screen, stars):
     star = Star(screen)
     # horizontal line of stars placement
@@ -20,18 +32,6 @@ def makeStars(screen, stars):
             newStar.rect.x = 2*x*star.width + star.width/2
             stars.add(newStar)
     stars.draw(screen)
-
-def quitGame():
-    print("Thanks for playing!")
-    sys.exit()
-
-def eventHandling():
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            quitGame()
-        if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_q:
-                quitGame()
 
 def updateScreen(screen, stars):
     screen.fill(settings.bgColor)
