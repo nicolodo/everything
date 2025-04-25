@@ -33,7 +33,7 @@ def makeStars(screen, stars, wobbliness):
             newStar.rect.y = 2*y*star.height + star.height/2 + randint(0, wobbliness)
             newStar.rect.x = 2*x*star.width + star.width/2 + randint(0, wobbliness)
             stars.add(newStar)
-            
+
 def justMakeStars(screen, stars, wobbliness):
     star = Star(screen)
     # horizontal line of stars placement
@@ -65,7 +65,8 @@ def updateStarLocation(screen, stars, wobbliness):
 
 def updateScreen(screen, stars, wobbliness):
     screen.fill(settings.bgColor)
-    updateStarLocation(screen, stars, wobbliness)
+    stars.empty()
+    makeStars(screen, stars, wobbliness)
     stars.draw(screen)
     # star.blit_me()
 
